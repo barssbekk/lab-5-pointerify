@@ -6,6 +6,10 @@ int swap(int &, int &);
 
 int main() {
     int x = 5, y = 10;
+
+    int* ptrX = &x;
+    int* ptrY = &y;
+    
     cout << "x = " << x << "  | y = " << y << endl;
 
     cout << "Swapping...\n";

@@ -2,23 +2,27 @@
 #include <iostream>
 using namespace std;
 
-int swap(int* ptrOne, int* ptrTwo);
+int swap(int* addressOne, int* addressTwo);
 
 int main() {
     int x = 5, y = 10;
 
     cout << "x = " << x << "  | y = " << y << endl;
 
+    int* addressX = &x;
+    int* addressY = &y;
+
     cout << "Swapping...\n";
-    int sum = swap(&x, &y);
+    int sum = swap(addressX, addressY); // Sum takes pointers/addresses
+
     cout << "x = " << x << " | y = " << y << endl;
     cout << "sum = " << sum << endl;
 
     return 0;
 }
 
-int swap(int* a, int* b) { // int* a = &x        int* b = &y;
-    int temp = *a; // temp = 5
+int swap(int* a, int* b) {
+    int temp = *a;
     *a = *b;
     *b = temp;
     return *a + *b; //10 + 5;

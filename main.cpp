@@ -19,10 +19,10 @@ int main() {
     return 0;
 }
 
-int swap(int* a, int* b) {
+int swap(int* a, int* b) { // int* a = &x        int* b = &y;
     int temp = *a;
-    a = &b;
-    b = &temp;
+    a = b;
+    *b = temp;
 
     // return *a + *b; //a + b;
 }

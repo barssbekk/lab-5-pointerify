@@ -20,6 +20,9 @@ int main() {
     return 0;
 }
 
+// swap() swaps two integers using pointers
+// arguments: int* addressOne, int* addressTwo
+// return: sum of the two swapped values
 int swap(int* a, int* b) {
     int temp = *a;
     *a = *b;

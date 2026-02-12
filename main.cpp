@@ -2,20 +2,20 @@
 #include <iostream>
 using namespace std;
 
-int swap(int &, int &);
+int swap(int* ptrOne, int* ptrTwo);
 
 int main() {
     int x = 5, y = 10;
 
-    int* ptrX = &x;
-    int* ptrY = &y;
-    
+    int* ptrX = &x; // stores address of x
+    int* ptrY = &y; // store address of y
+
     cout << "x = " << x << "  | y = " << y << endl;
 
     cout << "Swapping...\n";
-    int sum = swap(x, y);
+    // int sum = swap(x, y);
     cout << "x = " << x << " | y = " << y << endl;
-    cout << "sum = " << sum << endl;
+    // cout << "sum = " << sum << endl;
     return 0;
 }
 

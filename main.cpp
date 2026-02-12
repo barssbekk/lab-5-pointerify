@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-int swap(int* ptrOne, int* ptrTwo);
+// int swap(int* ptrOne, int* ptrTwo);
+int swap(int a, int b);
 
 int main() {
     int x = 5, y = 10;
@@ -19,9 +20,18 @@ int main() {
     return 0;
 }
 
-int swap(int &a, int &b) {
-    int temp = a;
-    a = b;
-    b = temp;
-    return a + b;
+int swap(int a, int b) {
+    int temp = *a;
+    a = &b;
+    b = &temp;
+
+    return *a + *b; //a + b;
 }
+
+// int swap(int* a, int* b) {
+//     int temp = *a;
+//     a = &b;
+//     b = &temp;
+//
+//     return *a + *b; //a + b;
+// }

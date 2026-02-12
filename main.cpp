@@ -8,11 +8,10 @@ int main() {
     int x = 5, y = 10;
 
     cout << "x = " << x << "  | y = " << y << endl;
+    cout << "Swapping...\n";
 
     int* addressX = &x;
     int* addressY = &y;
-
-    cout << "Swapping...\n";
     int sum = swap(addressX, addressY); // Sum takes pointers/addresses
 
     cout << "x = " << x << " | y = " << y << endl;
@@ -25,5 +24,5 @@ int swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
-    return *a + *b; //10 + 5;
+    return *a + *b;
 }
